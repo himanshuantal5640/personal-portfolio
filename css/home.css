@@ -1,0 +1,15 @@
+.hero {
+  height:90vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(45deg,#6c63ff,#3f3d56);
+  color:white;
+  animation:fade 2s ease-in;
+}
+
+@keyframes fade {
+  from{opacity:0;}
+  to{opacity:1;}
+}
