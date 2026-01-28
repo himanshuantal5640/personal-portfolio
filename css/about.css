@@ -1,13 +1,19 @@
 .about {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  gap: 50px;
   padding: 60px;
-  gap: 40px;
+  align-items: center;
 }
 
 .about img {
-  width: 200px;
+  width: 220px;
   border-radius: 50%;
-  box-shadow: 0 0 10px #aaa;
+  box-shadow: 0 0 15px var(--primary);
+}
+
+@media (max-width:768px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
 }

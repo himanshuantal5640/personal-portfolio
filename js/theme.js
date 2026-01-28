@@ -1,38 +1,22 @@
-const THEME_KEY = "theme-preference";
+const toggleBtn = document.querySelector(".toggle-btn");
 
-function applyTheme(theme) {
-  const isLight = theme === "light";
-  document.body.dataset.theme = isLight ? "light" : "";
-  updateThemeButton(isLight ? "light" : "dark");
-}
-
-function updateThemeButton(mode) {
-  const btn = document.querySelector(".theme-btn");
-  if (!btn) return;
-
-  if (mode === "light") {
-    btn.textContent = "🌙";
-    btn.setAttribute("aria-label", "Switch to dark mode");
+function setTheme(mode) {
+  if (mode === "dark") {
+    document.body.classList.add("dark");
+    toggleBtn.textContent = "🌞";
   } else {
-    btn.textContent = "☀️";
-    btn.setAttribute("aria-label", "Switch to light mode");
+    document.body.classList.remove("dark");
+    toggleBtn.textContent = "🌙";
   }
+  localStorage.setItem("theme", mode);
 }
 
-function toggleTheme() {
-  const isCurrentlyLight = document.body.dataset.theme === "light";
-  const nextTheme = isCurrentlyLight ? "dark" : "light";
-  applyTheme(nextTheme);
-  localStorage.setItem(THEME_KEY, nextTheme);
-}
+// Load saved theme
+const saved = localStorage.getItem("theme") || "light";
+setTheme(saved);
 
-(function initTheme() {
-  const saved = localStorage.getItem(THEME_KEY);
-  const preferred =
-    saved ||
-    (window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: light)").matches
-      ? "light"
-      : "dark");
-  applyTheme(preferred);
-})();
+// Toggle on click
+toggleBtn.addEventListener("click", () => {
+  const newTheme = document.body.classList.contains("dark") ? "light" : "dark";
+  setTheme(newTheme);
+});
