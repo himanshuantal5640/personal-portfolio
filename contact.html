@@ -4,6 +4,9 @@
   <title>Contact | Himanshu</title>
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+ <link rel="stylesheet" href="css/footer.css">
+
 </head>
 <body>
 
@@ -18,56 +21,58 @@
   </div>
 </nav>
 
-<section class="contact-section">
-  <h1 class="section-title">Get In <span>Touch</span></h1>
+<section class="contact-main">
 
-  <p class="contact-sub">
-    Feel free to reach out for internships, collaborations, or opportunities.
-  </p>
+  <!-- LEFT INFO -->
+  <div class="contact-left">
+    <h1>Let's Connect</h1>
+    <p>
+      I'm always excited to discuss new projects and opportunities.
+      Feel free to reach out anytime.
+    </p>
 
-  <!-- PERSONAL DETAILS -->
-  <div class="contact-details">
-
-      <div class="contact-card">
-        📱 Phone  
-        <a href="tel:+917351206107">+91 7351206107</a>
+    <div class="contact-info">
+      <div>
+        📧 <span>himanshuantal26@gmail.com</span>
       </div>
-    <div class="contact-card">
-    
-      <a href="mailto:himanshuantal26@gmail.com"> 📧 Email </a> 
+      <div>
+        📱 <span>+91 7351206107</span>
+      </div>
+      <div>
+        📍 <span>India</span>
+      </div>
     </div>
 
-
-    <div class="contact-card">
-       
-      <a href="https://www.linkedin.com/in/himanshu-antal/" target="_blank">💼 LinkedIn 
-      </a>
-    </div>
-
-    <div class="contact-card">
-        
-      <a href="https://github.com/himanshuantal5640" target="_blank">💻 GitHub</a>
-    </div>
-
-    <div class="contact-card">
-       
-      <a href="https://leetcode.com/u/N06Eufst2K/" target="_blank">🧩 LeetCode
-      </a>
-    </div>
+  <div class="socials">
+  <a href="https://github.com/himanshuantal5640" target="_blank">
+    <i class="fab fa-github"></i> GitHub
+  </a>
+  <a href="https://www.linkedin.com/in/himanshu-antal/" target="_blank">
+    <i class="fab fa-linkedin"></i> LinkedIn
+  </a>
+</div>
 
   </div>
 
-  <!-- MESSAGE FORM -->
-  <form class="contact-form">
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <textarea placeholder="Your Message"></textarea>
-    <button type="submit">Send Message</button>
-  </form>
+  <!-- RIGHT FORM -->
+  <div class="contact-right">
+    <form class="modern-form">
+      <input type="text" placeholder="Full Name *" required>
+      <input type="email" placeholder="Email Address *" required>
+      <input type="text" placeholder="Phone Number">
+      <input type="text" placeholder="Subject *" required>
+      <textarea placeholder="Tell me about your project..." required></textarea>
+      <button type="submit">Send Message 🚀</button>
+    </form>
+  </div>
 
 </section>
 
-<footer>© 2026 Himanshu Antal</footer>
+
+<div id="footer"></div>
+
 <script src="js/theme.js"></script>
+<script src="js/footer.js"></script>
+
 </body>
 </html>

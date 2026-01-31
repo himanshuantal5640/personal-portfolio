@@ -119,3 +119,30 @@
     align-items: center;
   }
 }
+/* SKILLS SECTION */
+.skills-section {
+  padding: 70px 8%;
+  text-align: center;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.skill-card {
+  background: var(--card);
+  padding: 18px;
+  border-radius: 14px;
+  font-weight: 600;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(108,92,231,0.25);
+  color: var(--primary);
+}
